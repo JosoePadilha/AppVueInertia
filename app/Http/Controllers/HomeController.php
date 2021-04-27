@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
   public function index()
   {
-    return Inertia::render('Layout');
+    return Inertia::render('Dashboard');
   }
 
   public function about()

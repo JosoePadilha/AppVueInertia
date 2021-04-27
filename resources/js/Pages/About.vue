@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Layout from "./Layout";
+import Layout from "./Dashboard";
 
 export default {
   components: {
