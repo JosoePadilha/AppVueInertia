@@ -1,17 +1,9 @@
 <template>
-  <layout>
-    <div>
-      <ol>
-        <li v-for="(users, index) in user" :key="index">
-          {{ users }}
-        </li>
-      </ol>
-    </div>
-  </layout>
+  <layout />
 </template>
 
 <script>
-import Layout from "../Layout";
+import Layout from "./Layout";
 
 export default {
   components: {

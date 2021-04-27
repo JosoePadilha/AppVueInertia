@@ -7,21 +7,13 @@ use Inertia\Inertia;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        $user ="Josoé Padilha";
+  public function index()
+  {
+    return Inertia::render('Layout');
+  }
 
-
-        return Inertia::render(
-            'Home',
-            [
-                'user' => $user
-            ]
-        );
-    }
-
-    public function about()
-    {
-        return Inertia::render('About');
-    }
+  public function about()
+  {
+    return Inertia::render('About');
+  }
 }

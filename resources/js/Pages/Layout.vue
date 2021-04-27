@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import SideBarComponent from "./Pages/Components/SideBarComponent";
+import SideBarComponent from "../Pages/Components/SideBarComponent";
 
 export default {
   components: {

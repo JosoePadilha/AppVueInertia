@@ -97,7 +97,117 @@
           </li>
         </div>
       </div>
-      <div v-bind:class="[isActive ? 'on' : 'off']" class="main-container"></div>
+      <div v-bind:class="[isActive ? 'on' : 'off']" class="main-container">
+        <div>
+          <div>
+            <b-card-group deck>
+              <b-card
+                bg-variant="primary"
+                text-variant="white"
+                header="Primary"
+                class="text-center"
+              >
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+
+              <b-card
+                bg-variant="secondary"
+                text-variant="white"
+                header="Secondary"
+                class="text-center"
+              >
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+
+              <b-card
+                bg-variant="success"
+                text-variant="white"
+                header="Success"
+                class="text-center"
+              >
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+            </b-card-group>
+          </div>
+          <div class="mt-3">
+            <b-card-group deck>
+              <b-card
+                bg-variant="info"
+                text-variant="white"
+                header="Info"
+                class="text-center"
+              >
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+
+              <b-card
+                bg-variant="warning"
+                text-variant="white"
+                header="Warning"
+                class="text-center"
+              >
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+
+              <b-card
+                bg-variant="danger"
+                text-variant="white"
+                header="Danger"
+                class="text-center"
+              >
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+            </b-card-group>
+          </div>
+          <div class="mt-3">
+            <b-card-group deck>
+              <b-card bg-variant="light" header="Light" class="text-center">
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+
+              <b-card
+                bg-variant="dark"
+                header="Dark"
+                text-variant="white"
+                class="text-center"
+              >
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+
+              <b-card header="Default" class="text-center">
+                <b-card-text
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.</b-card-text
+                >
+              </b-card>
+            </b-card-group>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -259,7 +369,7 @@ body {
 }
 
 .wrapper .sidebar .sidebar-menu .item .sub-menu {
-  background: #3498db;
+  background: #515455;
   overflow: hidden;
   max-height: 0;
   transition: 0.3s;
@@ -297,7 +407,7 @@ body {
   margin-top: 70px;
   margin-left: 250px;
   padding: 15px;
-  background: chocolate;
+  background: rgb(218, 214, 211);
   background-size: cover;
   height: 100vh;
   transition: 0.3s;
@@ -317,7 +427,7 @@ body {
   display: none;
 }
 
-.wrapper .sidebar.off .profile img{
+.wrapper .sidebar.off .profile img {
   width: 40px;
 }
 
@@ -330,11 +440,11 @@ body {
   padding-left: 3px;
 }
 
-.main-container.off{
+.main-container.off {
   margin-top: 70px;
   margin-left: 250px;
   padding: 15px;
-  background: chocolate;
+  background: rgb(218, 214, 211);
   background-size: cover;
   height: 100vh;
   transition: 0.3s;
@@ -342,4 +452,27 @@ body {
   margin-left: 70px;
 }
 
+@media (max-width: 414px) {
+  .wrapper .main-container.on {
+    margin-top: 70px;
+    margin-left: 250px;
+    padding: 15px;
+    background: rgb(218, 214, 211);
+    background-size: cover;
+    height: 100vh;
+    transition: 0.3s;
+    width: (100% - 150px);
+    margin-left: 150px;
+  }
+  .wrapper .header .header-menu .sidebar-btn {
+    margin-top: 35px;
+    margin-left: 120px;
+  }
+  .wrapper .sidebar.on {
+    width: 150px;
+  }
+  .wrapper .header .header-menu .title span {
+    display: table-row;
+}
+}
 </style>
