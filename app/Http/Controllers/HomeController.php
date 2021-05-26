@@ -12,8 +12,8 @@ class HomeController extends Controller
     return Inertia::render('Components/InitialComponent');
   }
 
-  public function about()
+  public function teste()
   {
-    return Inertia::render('About');
+    return Inertia::render('Components/Teste');
   }
 }

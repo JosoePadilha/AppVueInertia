@@ -26,27 +26,29 @@
             <img src="https://picsum.photos/500/500/?image=54" alt="" />
             <p>Nome imagem</p>
           </center>
-          <li class="item">
-            <a href="#" class="menu-btn">
-              <i> <b-icon icon="laptop"></b-icon></i><span>Dashboard</span>
-            </a>
-          </li>
+          <inertia-link href="/">
+            <li class="item">
+              <a href="#" class="menu-btn">
+                <i> <b-icon icon="laptop"></b-icon></i><span>Dashboard</span>
+              </a>
+            </li>
+          </inertia-link>
           <li class="item" id="profile">
             <a href="#profile" class="menu-btn">
               <i> <b-icon icon="person-circle"></b-icon></i
               ><span
-                >Profile<i class="drop-down">
+                >Clientes<i class="drop-down">
                   <b-icon icon="chevron-double-down"></b-icon></i
               ></span>
             </a>
             <div class="sub-menu">
-              <a href="#" class="menu-btn">
-                <i><b-icon icon="card-image"></b-icon></i
-                ><span>Picture<i></i></span>
-              </a>
+              <inertia-link href="/create">
+                <i><b-icon icon="person-plus-fill"></b-icon></i
+                ><span>Cadastrar<i></i></span>
+              </inertia-link>
               <a href="#" class="menu-btn">
                 <i><b-icon icon="person-lines-fill"></b-icon></i
-                ><span>Info<i></i></span>
+                ><span>Listar<i></i></span>
               </a>
             </div>
           </li>
@@ -105,11 +107,9 @@
 </template>
 
 <script>
-
 export default {
   name: "DashBoardComponent",
-  components:{
-  },
+  components: {},
   data() {
     return {
       isActive: true,
@@ -213,7 +213,7 @@ body {
   position: fixed;
   top: 70px;
   width: 250px;
-  height: calc(100% - 0%);
+  height: 100%;
   transition: 0.3s;
   transition-property: width;
   overflow-y: auto;
@@ -225,7 +225,7 @@ body {
 
 .wrapper .sidebar .sidebar-menu .profile img {
   margin: 20px 0;
-  width: 50%;
+  width: 30%;
   height: 50%;
   border-radius: 50%;
 }
@@ -275,10 +275,10 @@ body {
 }
 
 .wrapper .sidebar .sidebar-menu .item .sub-menu a {
+  text-decoration: none;
   display: block;
   position: relative;
   color: #fff;
-  white-space: nowrap;
   font-size: 15px;
   padding: 20px;
   border-bottom: 1px solid #8fc5e9;
@@ -293,7 +293,7 @@ body {
 
 .wrapper .sidebar .sidebar-menu .item .sub-menu i {
   padding-right: 20px;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .wrapper .sidebar .sidebar-menu .item:target .sub-menu {
@@ -324,10 +324,9 @@ body {
 .wrapper .sidebar.off a span {
   display: none;
 }
-.wrapper .sidebar.off .profile
-{
+.wrapper .sidebar.off .profile {
   border: 0;
-	border-bottom: 1px solid rgb(134, 132, 132);
+  border-bottom: 1px solid rgb(134, 132, 132);
 }
 
 .wrapper .sidebar.off .profile img {
